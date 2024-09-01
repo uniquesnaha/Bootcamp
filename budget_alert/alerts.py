@@ -29,6 +29,7 @@ def check_exceedance(user_id,budget_id):
         logger.info("Checking budget exceedance")
         for row in budgets_df:
                 if row['AVAILABLE_AMT']<0 and row['USER_ID']==user_id and row['BUDGET_ID']==budget_id:
+                    logger.info("Budget exceeded")
                     exceeded_amt=abs(row['AVAILABLE_AMT'])
                     alert_type=get_alert_type(user_id,conn)
                     user_df = spark_db_to_df(spark,"users")
@@ -123,7 +124,7 @@ def check_available_budget(user_id, budget_id):
         if result:
             available_amt = result[0]
             print(f"Available amount for budget ID {budget_id} and user ID {user_id}: {available_amt}")
-            
+
             return available_amt
         else:
             print("No budget found for the specified user and budget ID.")
