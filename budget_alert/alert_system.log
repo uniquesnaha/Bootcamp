@@ -119,3 +119,13 @@ twilio.base.exceptions.TwilioRestException:
 2024-09-02 17:36:49,762 - alerts - INFO - Budget exceeded by 8500.00
 2024-09-02 17:36:49,811 - alerts - INFO - Fetched alert type for user 3
 2024-09-02 17:36:50,373 - alerts - INFO - Sending alert to user3
+2024-09-02 17:48:54,862 - alerts - INFO - Transaction of 1000.0 processed successfully for user 1
+2024-09-02 17:48:55,197 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:48:55,197 - alerts - INFO - Budget exceeded by 22600.00
+2024-09-02 17:48:55,219 - alerts - INFO - Fetched alert type for user 1
+2024-09-02 17:48:55,544 - alerts - INFO - Sending alert to user1
+2024-09-02 17:51:49,904 - alerts - INFO - Transaction of 800.0 processed successfully for user 3
+2024-09-02 17:51:50,232 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:51:50,232 - alerts - INFO - Budget exceeded by 9300.00
+2024-09-02 17:51:50,235 - alerts - INFO - Fetched alert type for user 3
+2024-09-02 17:51:50,714 - alerts - INFO - Sending alert to user3
