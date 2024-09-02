@@ -2,16 +2,16 @@ import smtplib
 from twilio.rest import Client
 import tkinter as tk
 from tkinter import messagebox
-from budget_alert.constants import *
+from constants import *
 import oracledb
 
 
 
-
+#connect to oracle database and return connection
 def connect_db():
     try:
         connection = oracledb.connect(user=oracle_username, password=oracle_password, dsn=dsn)
-        print("Connected as new_orac successfully!")
+        print("Connected to database successfully!")
         return connection
 
     except oracledb.DatabaseError as e:
@@ -20,7 +20,7 @@ def connect_db():
 
 
 
-
+#execute a dml sql file
 def execute_sql_file(file_path,connection):
     try:
         with open(file_path, 'r') as file:
@@ -41,6 +41,9 @@ def execute_sql_file(file_path,connection):
     finally:
         cursor.close()
         connection.close()
+
+
+#Execute PL/SQL files
 def execute_triggers_from_file(file_path, connection):
     try:
         with open(file_path, 'r') as file:
@@ -69,7 +72,7 @@ def execute_triggers_from_file(file_path, connection):
         connection.close()
 
 
-
+#Send email to a given reciever email id
 def send_email(reciever_email,budget_name,exceeded_amt):
     try:
         s = smtplib.SMTP('smtp.gmail.com', 587)
@@ -83,16 +86,17 @@ def send_email(reciever_email,budget_name,exceeded_amt):
         s.sendmail("budgetalert007@gmail.com", reciever_email, message)
         # terminating the session
         s.quit()
+        print("Mail alert sent successfully")
     except smtplib.SMTPConnectError:
         print("Error in establishing connection with Gmail")
     except smtplib.SMTPAuthenticationError:
         print("Incorrect Username or Password")
 
-
+#Send sms to a phone number
 def send_sms(reciever_phno,budget_name,exceeded_amt):
     # Twilio credentials
     account_sid = 'AC75312d4fea64730cc46d98a0b92e9c12'
-    auth_token = 'c5a8042c701593c4107a6f791e26bb09'
+    auth_token = '208f26e156ecc58f8381ec5dcd1b9cfe'
     client = Client(account_sid, auth_token)
 
     # Send SMS
@@ -101,7 +105,9 @@ def send_sms(reciever_phno,budget_name,exceeded_amt):
         from_='+14136505320',  # Twilio number
         to="+91"+ str(reciever_phno)  # Replace with receivers number
     )
+    print("SMS Alert Sent successfully")
 
+#Send in_app message
 def send_inapp(budget_name,exceeded_amt):
     root = tk.Tk()
     root.withdraw()  # Hide the root window
@@ -112,6 +118,8 @@ def send_inapp(budget_name,exceeded_amt):
     # Show the alert pop-up
     messagebox.showwarning("Budget Exceeded Alert", message)
 
-    # Optional: Close the root window after the alert is closed
+
     root.destroy()
+    print("In-app alert sent successfully")
+
 

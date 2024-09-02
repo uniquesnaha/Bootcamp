@@ -1,0 +1,36 @@
+2024-09-02 17:00:36,513 - __main__ - ERROR - An error occured while checking budget exceedance : name 'get_spark_session' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 3, in check_exceedance
+NameError: name 'get_spark_session' is not defined
+2024-09-02 17:01:16,532 - __main__ - ERROR - An error occured while checking budget exceedance : name 'connect_db' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 4, in check_exceedance
+NameError: name 'connect_db' is not defined
+2024-09-02 17:02:03,672 - __main__ - ERROR - An error occured while checking budget exceedance : name 'oracle_username' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 4, in check_exceedance
+  File "<stdin>", line 3, in connect_db
+NameError: name 'oracle_username' is not defined
+2024-09-02 17:02:28,357 - __main__ - INFO - Checking budget exceedance
+2024-09-02 17:02:28,439 - __main__ - ERROR - An error occured while checking budget exceedance : [CANNOT_CONVERT_COLUMN_INTO_BOOL] Cannot convert column into bool: please use '&' for 'and', '|' for 'or', '~' for 'not' when building DataFrame boolean expressions.
+Traceback (most recent call last):
+  File "<stdin>", line 8, in check_exceedance
+  File "C:\Users\Snaha\anaconda3\envs\newproj\lib\site-packages\pyspark\sql\column.py", line 1400, in __nonzero__
+    raise PySparkValueError(
+pyspark.errors.exceptions.base.PySparkValueError: [CANNOT_CONVERT_COLUMN_INTO_BOOL] Cannot convert column into bool: please use '&' for 'and', '|' for 'or', '~' for 'not' when building DataFrame boolean expressions.
+2024-09-02 17:04:20,056 - __main__ - INFO - Checking budget exceedance
+2024-09-02 17:04:20,057 - __main__ - INFO - Budget exceeded
+2024-09-02 17:04:20,065 - __main__ - INFO - Fetched alert type for user 1
+2024-09-02 17:04:22,146 - __main__ - INFO - Sending alert to user1
+2024-09-02 17:04:26,605 - __main__ - INFO - Budget not exceeded
+2024-09-02 17:04:26,606 - __main__ - INFO - Budget not exceeded
+2024-09-02 17:04:26,607 - __main__ - INFO - Budget not exceeded
+2024-09-02 17:06:16,456 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:06:16,457 - alerts - INFO - Budget exceeded
+2024-09-02 17:06:16,458 - alerts - INFO - Fetched alert type for user 1
+2024-09-02 17:06:16,729 - alerts - INFO - Sending alert to user1
+2024-09-02 17:06:47,560 - alerts - INFO - Transaction of 10000.0 processed successfully for user 1
+2024-09-02 17:06:47,863 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:06:47,863 - alerts - INFO - Budget exceeded
+2024-09-02 17:06:47,864 - alerts - INFO - Fetched alert type for user 1
+2024-09-02 17:06:48,076 - alerts - INFO - Sending alert to user1

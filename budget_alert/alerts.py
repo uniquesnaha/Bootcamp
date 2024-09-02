@@ -2,9 +2,9 @@ import oracledb
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 import logging
-from budget_alert.utilities import *
-from budget_alert.constants import*
-from budget_alert.spark_utils import *
+from utilities import *
+from constants import*
+from spark_utils import *
 
 # Configure logging
 logging.basicConfig(
@@ -24,12 +24,12 @@ def check_exceedance(user_id,budget_id):
       try:
         spark=get_spark_session()
         conn=connect_db()
-        budgets_df=spark_db_to_df(spark,"budgets")
-        budgets_df=budgets_df.collect()
+        budgets_df=spark_db_to_df(spark,"budgets").collect()
+        
         logger.info("Checking budget exceedance")
         for row in budgets_df:
                 if row['AVAILABLE_AMT']<0 and row['USER_ID']==user_id and row['BUDGET_ID']==budget_id:
-                    logger.info("Budget exceeded")
+                    logger.info(f"Budget exceeded by {abs(row['AVAILABLE_AMT'])}")
                     exceeded_amt=abs(row['AVAILABLE_AMT'])
                     alert_type=get_alert_type(user_id,conn)
                     user_df = spark_db_to_df(spark,"users")
@@ -52,6 +52,7 @@ def check_exceedance(user_id,budget_id):
                         send_inapp(row['BUDGET_NAME'], exceeded_amt)
                     else:
                         print(f"Unknown alert type {alert_type} for user {user_id}.")
+
                     
         conn.close()
       except Exception as e:

@@ -1,0 +1,121 @@
+2024-09-02 15:41:00,256 - alerts - INFO - Transaction of 200.0 processed successfully for user 1
+2024-09-02 15:41:30,395 - alerts - ERROR - An error occured while checking budget exceedance : 'list' object has no attribute 'collect'
+Traceback (most recent call last):
+  File "D:\Bootcamp\budget_alert\alerts.py", line 28, in check_exceedance
+    budgets_df=budgets_df.collect()
+AttributeError: 'list' object has no attribute 'collect'
+2024-09-02 15:43:12,530 - alerts - INFO - Transaction of 200.0 processed successfully for user 1
+2024-09-02 15:43:27,337 - alerts - INFO - Checking budget exceedance
+2024-09-02 16:56:06,007 - alerts - INFO - Transaction of 10000.0 processed successfully for user 1
+2024-09-02 16:56:10,442 - alerts - INFO - Checking budget exceedance
+2024-09-02 16:56:10,443 - alerts - INFO - Budget exceeded
+2024-09-02 16:56:11,157 - alerts - INFO - Fetched alert type for user 1
+2024-09-02 16:56:12,205 - alerts - ERROR - An error occured while checking budget exceedance : 'list' object has no attribute 'createOrReplaceTempView'
+Traceback (most recent call last):
+  File "D:\Bootcamp\budget_alert\alerts.py", line 37, in check_exceedance
+    user_df.createOrReplaceTempView("user_view")
+AttributeError: 'list' object has no attribute 'createOrReplaceTempView'
+2024-09-02 16:57:48,218 - alerts - INFO - Transaction of 10000.0 processed successfully for user 1
+2024-09-02 16:57:49,595 - alerts - INFO - Checking budget exceedance
+2024-09-02 16:57:49,595 - alerts - INFO - Budget exceeded
+2024-09-02 16:57:49,596 - alerts - INFO - Fetched alert type for user 1
+2024-09-02 16:57:50,079 - alerts - ERROR - An error occured while checking budget exceedance : 'list' object has no attribute 'createOrReplaceTempView'
+Traceback (most recent call last):
+  File "D:\Bootcamp\budget_alert\alerts.py", line 37, in check_exceedance
+    user_df.createOrReplaceTempView("user_view")
+AttributeError: 'list' object has no attribute 'createOrReplaceTempView'
+2024-09-02 17:09:14,637 - alerts - INFO - Transaction of 1000.0 processed successfully for user 1
+2024-09-02 17:09:30,711 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:09:30,712 - alerts - INFO - Budget exceeded by 21400.00
+2024-09-02 17:09:30,714 - alerts - INFO - Fetched alert type for user 1
+2024-09-02 17:09:31,417 - alerts - INFO - Sending alert to user1
+2024-09-02 17:11:13,911 - alerts - INFO - Transaction of 5500.0 processed successfully for user 3
+2024-09-02 17:11:14,169 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:11:14,170 - alerts - INFO - Budget exceeded by 500.00
+2024-09-02 17:11:14,229 - alerts - INFO - Fetched alert type for user 3
+2024-09-02 17:11:14,469 - alerts - INFO - Sending alert to user3
+2024-09-02 17:22:26,116 - alerts - INFO - Transaction of 100.0 processed successfully for user 1
+2024-09-02 17:22:27,587 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:22:27,589 - alerts - INFO - Budget exceeded by 21500.00
+2024-09-02 17:22:27,590 - alerts - INFO - Fetched alert type for user 1
+2024-09-02 17:22:28,080 - alerts - INFO - Sending alert to user1
+2024-09-02 17:27:10,255 - alerts - INFO - Transaction of 100.0 processed successfully for user 1
+2024-09-02 17:27:24,997 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:27:24,997 - alerts - INFO - Budget exceeded by 21600.00
+2024-09-02 17:27:25,000 - alerts - INFO - Fetched alert type for user 1
+2024-09-02 17:27:26,072 - alerts - INFO - Sending alert to user1
+2024-09-02 17:27:56,127 - alerts - INFO - Transaction of 10000.0 processed successfully for user 2
+2024-09-02 17:27:56,455 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:27:56,456 - alerts - INFO - Budget exceeded by 5000.00
+2024-09-02 17:27:56,543 - alerts - INFO - Fetched alert type for user 2
+2024-09-02 17:27:56,874 - alerts - INFO - Sending alert to user2
+2024-09-02 17:27:57,111 - twilio.http_client - INFO - -- BEGIN Twilio API Request --
+2024-09-02 17:27:57,111 - twilio.http_client - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC75312d4fea64730cc46d98a0b92e9c12/Messages.json
+2024-09-02 17:27:57,112 - twilio.http_client - INFO - Headers:
+2024-09-02 17:27:57,112 - twilio.http_client - INFO - Content-Type : application/x-www-form-urlencoded
+2024-09-02 17:27:57,112 - twilio.http_client - INFO - User-Agent : twilio-python/9.2.3 (Windows AMD64) Python/3.10.4
+2024-09-02 17:27:57,112 - twilio.http_client - INFO - X-Twilio-Client : python-9.2.3
+2024-09-02 17:27:57,112 - twilio.http_client - INFO - Accept-Charset : utf-8
+2024-09-02 17:27:57,112 - twilio.http_client - INFO - Accept : application/json
+2024-09-02 17:27:57,113 - twilio.http_client - INFO - -- END Twilio API Request --
+2024-09-02 17:27:59,283 - twilio.http_client - INFO - Response Status Code: 401
+2024-09-02 17:27:59,284 - twilio.http_client - INFO - Response Headers: {'Date': 'Mon, 02 Sep 2024 11:57:59 GMT', 'Content-Type': 'application/json', 'Content-Length': '107', 'Connection': 'keep-alive', 'X-Twilio-Error-Code': '20003', 'Twilio-Request-Id': 'RQ795e3673ec8d97f01e7a09474776e5f3', 'Twilio-Request-Duration': '0.020', 'X-Api-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key, X-Pre-Auth-Context, X-Target-Region', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag, Twilio-Request-Id', 'Access-Control-Allow-Credentials': 'true', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1'}
+2024-09-02 17:27:59,285 - alerts - ERROR - An error occured while checking budget exceedance : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/AC75312d4fea64730cc46d98a0b92e9c12/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authenticate[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+Traceback (most recent call last):
+  File "D:\Bootcamp\budget_alert\alerts.py", line 50, in check_exceedance
+    send_sms(receiver_phno, row['BUDGET_NAME'], exceeded_amt)
+  File "D:\Bootcamp\budget_alert\utilities.py", line 103, in send_sms
+    message = client.messages.create(
+  File "C:\Users\Snaha\anaconda3\envs\newproj\lib\site-packages\twilio\rest\api\v2010\account\message\__init__.py", line 565, in create
+    payload = self._version.create(
+  File "C:\Users\Snaha\anaconda3\envs\newproj\lib\site-packages\twilio\base\version.py", line 465, in create
+    return self._parse_create(method, uri, response)
+  File "C:\Users\Snaha\anaconda3\envs\newproj\lib\site-packages\twilio\base\version.py", line 436, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/AC75312d4fea64730cc46d98a0b92e9c12/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authenticate[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+2024-09-02 17:35:58,445 - alerts - INFO - Transaction of 1000.0 processed successfully for user 2
+2024-09-02 17:36:14,469 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:36:14,470 - alerts - INFO - Budget exceeded by 6000.00
+2024-09-02 17:36:14,555 - alerts - INFO - Fetched alert type for user 2
+2024-09-02 17:36:15,396 - alerts - INFO - Sending alert to user2
+2024-09-02 17:36:15,398 - twilio.http_client - INFO - -- BEGIN Twilio API Request --
+2024-09-02 17:36:15,399 - twilio.http_client - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC75312d4fea64730cc46d98a0b92e9c12/Messages.json
+2024-09-02 17:36:15,400 - twilio.http_client - INFO - Headers:
+2024-09-02 17:36:15,401 - twilio.http_client - INFO - Content-Type : application/x-www-form-urlencoded
+2024-09-02 17:36:15,403 - twilio.http_client - INFO - User-Agent : twilio-python/9.2.3 (Windows AMD64) Python/3.10.4
+2024-09-02 17:36:15,404 - twilio.http_client - INFO - X-Twilio-Client : python-9.2.3
+2024-09-02 17:36:15,404 - twilio.http_client - INFO - Accept-Charset : utf-8
+2024-09-02 17:36:15,405 - twilio.http_client - INFO - Accept : application/json
+2024-09-02 17:36:15,406 - twilio.http_client - INFO - -- END Twilio API Request --
+2024-09-02 17:36:16,653 - twilio.http_client - INFO - Response Status Code: 201
+2024-09-02 17:36:16,654 - twilio.http_client - INFO - Response Headers: {'Date': 'Mon, 02 Sep 2024 12:06:16 GMT', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '865', 'Connection': 'keep-alive', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQcab66efb6aa7ef9b596737edb68fce78', 'Twilio-Request-Duration': '0.106', 'X-Api-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key, X-Pre-Auth-Context, X-Target-Region', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag, Twilio-Request-Id', 'Access-Control-Allow-Credentials': 'true', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1'}
+2024-09-02 17:36:49,096 - alerts - INFO - Transaction of 8000.0 processed successfully for user 3
+2024-09-02 17:36:49,762 - alerts - INFO - Checking budget exceedance
+2024-09-02 17:36:49,762 - alerts - INFO - Budget exceeded by 8500.00
+2024-09-02 17:36:49,811 - alerts - INFO - Fetched alert type for user 3
+2024-09-02 17:36:50,373 - alerts - INFO - Sending alert to user3

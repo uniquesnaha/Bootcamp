@@ -1,3 +1,5 @@
+import os
+os.chdir(r'D:\Bootcamp\budget_alert')
 from alerts import *
 
 
